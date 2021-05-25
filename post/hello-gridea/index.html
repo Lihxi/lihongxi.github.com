@@ -8,9 +8,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lihxi.github.io/lihongxi.github.io//favicon.ico?v=1621902939566">
+<link rel="shortcut icon" href="https://lihxi.github.io/lihongxi.github.io//favicon.ico?v=1621907250879">
 <link rel="stylesheet" href="https://lihxi.github.io/lihongxi.github.io//styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -35,7 +41,7 @@ Gridea 主页
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lihxi.github.io/lihongxi.github.io/">
-        <img src="https://lihxi.github.io/lihongxi.github.io//images/avatar.png?v=1621902939566" class="site-logo">
+        <img src="https://lihxi.github.io/lihongxi.github.io//images/avatar.png?v=1621907250879" class="site-logo">
         <h1 class="site-title">Li Hongxi</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -73,6 +79,10 @@ Gridea 主页
   <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
     <div class="social-container">
       
+        
+          <a class="social-link" href="https://github.com/Lihxi" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
         
       
         
@@ -139,6 +149,12 @@ Gridea 主页
             
 
             
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
 
           </div>
 
@@ -166,6 +182,29 @@ var app = new Vue({
     hljs.initHighlightingOnLoad()
   </script>
 
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '6737ccfe30a731997135',
+        clientSecret: 'a20be7629de1e99e75b784fe4080f50b6a0a4b5f',
+        repo: 'lihongxi.github.io',
+        owner: 'Lihxi',
+        admin: ['Lihxi'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
