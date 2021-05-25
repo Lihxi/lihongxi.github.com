@@ -2,11 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lihxi.github.io/lihongxi.github.io/</id>
     <title>Li Hongxi</title>
-    <updated>2021-05-25T00:27:44.250Z</updated>
+    <updated>2021-05-25T00:28:35.551Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lihxi.github.io/lihongxi.github.io/"/>
     <link rel="self" href="https://lihxi.github.io/lihongxi.github.io/atom.xml"/>
     <logo>https://lihxi.github.io/lihongxi.github.io/images/avatar.png</logo>
     <icon>https://lihxi.github.io/lihongxi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Li Hongxi</rights>
+    <entry>
+        <title type="html"><![CDATA[存储介质与接口]]></title>
+        <id>https://lihxi.github.io/lihongxi.github.io/post/存储介质与接口/</id>
+        <link href="https://lihxi.github.io/lihongxi.github.io/post/存储介质与接口/">
+        </link>
+        <updated>2021-05-24T06:46:04.000Z</updated>
+    </entry>
 </feed>

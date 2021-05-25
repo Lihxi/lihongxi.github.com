@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>存储介质与接口 | Li Hongxi</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://lihxi.github.io/lihongxi.github.io//favicon.ico?v=1621902508357">
+<link rel="stylesheet" href="https://lihxi.github.io/lihongxi.github.io//styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="【参考来源】
+一、存储介质
+存储介质有：软盘、光盘、机械硬盘以及SSD硬盘。
+1. 机械硬盘
+内部机械结构：
+主轴：驱动盘片高速运转
+盘片：存放数据
+磁头驱动机构：驱动磁头在高速运转的盘片上写数据
+接口：设备 从内向外 或 从外向内 的数据..." />
+    <meta name="keywords" content="存储,学习记录" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://lihxi.github.io/lihongxi.github.io/">
+        <img src="https://lihxi.github.io/lihongxi.github.io//images/avatar.png?v=1621902508357" class="site-logo">
+        <h1 class="site-title">Li Hongxi</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://lihxi.github.io/lihongxi.github.io/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://lihxi.github.io/lihongxi.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">存储介质与接口</h2>
+            <div class="post-date">2021-05-24</div>
+            
+            <div class="post-content" v-pre>
+              <p><a href="https://blog.csdn.net/yanyumin52/article/details/79670374">【参考来源】</a></p>
+<h1 id="span-id存储介质一-存储介质span"><span id="存储介质">一、存储介质</span></h1>
+<p>存储介质有：软盘、光盘、机械硬盘以及SSD硬盘。</p>
+<h2 id="span-id机械硬盘1-机械硬盘span"><span id="机械硬盘">1. 机械硬盘</span></h2>
+<p><strong>内部机械结构</strong>：</p>
+<p>主轴：驱动盘片高速运转</p>
+<p>盘片：存放数据</p>
+<p>磁头驱动机构：驱动磁头在高速运转的盘片上写数据</p>
+<p>接口：设备 <em>从内向外</em> 或 <em>从外向内</em> 的数据传输口</p>
+<p>控制电路：供电模块</p>
+<p>磁头组件：写数据的组件部分</p>
+<p><strong>电子结构</strong>：</p>
+<p>主控芯片：控制数据的读与写</p>
+<p>数据传输芯片：存 或 读 数据</p>
+<p><span id="高速缓存芯片"><strong>?</strong>  </span>高速缓存芯片：解决 <em>CPU</em>  和 <em>硬件外设</em>  间的<strong>速率不匹配问题</strong></p>
+<p>磁头：通过磁性把无规则的磁性材料转化为有规则的排放<font color=grey size=1>（？磁化过程）</font></p>
+<p>盘片启停区：一般为盘片最内侧部分，<strong>确定磁盘读写的初始位置</strong></p>
+<p>数据区：启停区外的一圈都是，一般理解为磁道</p>
+<blockquote>
+<p>磁道越多容量越大。</p>
+<p>磁道分为扇区（如64K一个扇区），扇区会影响磁盘读写的性能。</p>
+</blockquote>
+<p>柱面：不同盘片的同一位置的扇区组成的结构<font color=grey size=1>（这么理解应该没毛病）</font></p>
+<p>磁头数：一般是盘片个数的两倍，为保证数据读写快</p>
+<p><strong>机械硬盘主要参数</strong>：硬盘容量、转速、缓存、平均访问时间、数据传输率</p>
+<h2 id="span-idssd硬盘2-ssd硬盘span"><span id="SSD硬盘">2. SSD硬盘</span></h2>
+<blockquote>
+<p>摒弃了机械硬盘的一些元件，都是用芯片来完成数据读写控制要求。</p>
+</blockquote>
+<p><strong>固态硬盘的存储介质分两种</strong>：采用闪存（FLASH芯片）作为存储介质、采用DRAM作为存储介质</p>
+<blockquote>
+<p><strong>基于闪存类</strong>：采用FLASH芯片作为存储介质，这也是通常所说的SSD</p>
+<blockquote>
+<p>这种SSD固态硬盘最大的优点就是可以<strong>移动</strong>，而且<strong>数据保护不受电源控制</strong>。 一般它擦写次数普遍为3000次左右。</p>
+</blockquote>
+<p><strong>基于DRAM类</strong>：采用DRAM作为存储介质，应用范围较窄。</p>
+<blockquote>
+<p>仿效传统硬盘的设计，可被绝大部分操作系统的文件系统工具进行卷设置和管理，并提供工业标准的PCI和FC接口用于连接主机或者服务器。</p>
+<p>应用方式可分为SSD硬盘和SSD硬盘阵列两种。</p>
+<p>高性能的存储器，使用寿命很长，需要独立电源来保护数据安全。</p>
+</blockquote>
+</blockquote>
+<h1 id="span-id接口二-接口span"><span id="接口">二、接口</span></h1>
+<h2 id="span-idata接口1-ata接口span"><span id="ATA接口">1. ATA接口</span></h2>
+<p>高技术配置（Advanced Technology Attachment）</p>
+<p>ATA硬盘也常称为IDE硬盘</p>
+<p>ATA接口为并行ATA技术，最大传输为133MBps</p>
+<h2 id="span-idscsi接口2-scsi接口span"><span id="SCSI接口">2. SCSI接口</span></h2>
+<p><a href="%5Bhttps://baike.baidu.com/item/%E5%B0%8F%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3?fromtitle=SCSI&amp;fromid=180628%5D(https://baike.baidu.com/item/%E5%B0%8F%E5%9E%8B%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%8E%A5%E5%8F%A3?fromtitle=SCSI&amp;fromid=180628)">【词条】</a></p>
+<p>小型计算机系统接口（Small Computer System Interface）</p>
+<p>一种用于计算机及其周边设备之间（硬盘、软驱、光驱、打印机、扫描仪等）系统级接口的独立处理器标准。</p>
+<h2 id="span-idsata接口3-sata接口span"><span id="SATA接口">3. SATA接口</span></h2>
+<p>串行高级技术附件（Serial Advanced Technology Attachment）</p>
+<p>一种基于行业标准的串行硬件驱动器接口</p>
+<p>SATA硬盘采用点对点连接方式，支持热插拔</p>
+<h2 id="span-idsas接口4-sas接口span"><span id="SAS接口">4. SAS接口</span></h2>
+<p><a href="%5Bhttps://baike.baidu.com/item/SAS%E6%8E%A5%E5%8F%A3%5D(https://baike.baidu.com/item/SAS%E6%8E%A5%E5%8F%A3)">【词条】</a></p>
+<p>串行SCSI（Serial Attached SCSI）</p>
+<p>一种电脑集线的技术，其功能主要是做周边零件的数据传输，如：硬盘、CD-ROM等设备而设计的接口。</p>
+<p>串行SCSI 由并行SCSI物理存储接口演化而来。与并行方式相比，串行方式能提供更快速的通信传输速度以及更简易的配置。此外SAS并支持与串行式ATA（SATA）设备兼容，且两者可以使用相类似的电缆。</p>
+<p>支持点对点、全双工、双端口</p>
+<h2 id="span-idfc接口5-fc接口span"><span id="FC接口">5. FC接口</span></h2>
+<p>网状通道技术（Fibre Channel）</p>
+<p>光纤对接的一种接口标准形式</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://lihxi.github.io/lihongxi.github.io/tag/vsKXthlYb/" class="tag">
+                    存储
+                  </a>
+                
+                  <a href="https://lihxi.github.io/lihongxi.github.io/tag/e8lyWUOcH/" class="tag">
+                    学习记录
+                  </a>
+                
+              </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>
